@@ -1,0 +1,103 @@
+{
+    "build": {
+        "beforeBuildCommand": "npm run build",
+        "beforeDevCommand": "npm run dev",
+        "devPath": "http://localhost:5173",
+        "distDir": "../build"
+    },
+    "package": {
+        "productName": "Prismi",
+        "version": "1.0.0"
+    },
+    "tauri": {
+        "allowlist": {
+            "dialog": {
+                "confirm": true,
+                "open": true
+            },
+            "protocol": {
+                "asset": true,
+                "assetScope": [
+                    "$APPDATA/caches/icons/*",
+                    "$APPCONFIG/caches/icons/*",
+                    "$CONFIG/caches/icons/*"
+                ]
+            },
+            "shell": {
+                "open": true
+            },
+            "window": {
+                "create": true,
+                "close": true,
+                "hide": true,
+                "show": true,
+                "maximize": true,
+                "minimize": true,
+                "unmaximize": true,
+                "unminimize": true,
+                "startDragging": true,
+                "setDecorations": true
+            },
+            "os": {
+                "all": true
+            },
+            "app": {
+                "all": true
+            }
+        },
+        "macOSPrivateApi": true,
+        "bundle": {
+            "active": true,
+            "category": "Utility",
+            "copyright": "",
+            "deb": {
+                "depends": []
+            },
+            "externalBin": [],
+            "icon": [
+                "icons/128x128.png",
+                "icons/128x128@2x.png",
+                "icons/icon.icns",
+                "icons/icon.ico"
+            ],
+            "identifier": "com.d3w10.prismi",
+            "shortDescription": "",
+            "longDescription": "",
+            "macOS": {
+                "entitlements": null,
+                "exceptionDomain": "",
+                "frameworks": [],
+                "providerShortName": null,
+                "signingIdentity": null
+            },
+            "resources": [],
+            "targets": "all",
+            "windows": {
+                "certificateThumbprint": null,
+                "digestAlgorithm": "sha256",
+                "timestampUrl": ""
+            }
+        },
+        "security": {
+            "csp": "default-src 'self';"
+        },
+        "updater": {
+            "active": false
+        },
+        "windows": [
+            {
+                "titleBarStyle": "Overlay",
+                "hiddenTitle": true,
+                "fullscreen": false,
+                "height": 800,
+                "resizable": true,
+                "title": "Prismi",
+                "width": 1280,
+                "minHeight": 700,
+                "minWidth": 1100,
+                "visible": false,
+                "decorations": false
+            }
+        ]
+    }
+}
